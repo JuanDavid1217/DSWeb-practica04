@@ -1,0 +1,24 @@
+<!DOCTYPE hibernate-configuration PUBLIC 
+        "-//Hibernate/Hibernate Configuration DTD 3.0//EN"
+        "http://hibernate.sourceforge.net/hibernate-configuration-3.0.dtd">
+<hibernate-configuration>
+    <session-factory>
+        <property name="hibernate.connection.driver_class">org.postgresql.Driver</property>
+        <property name="hibernate.connection.url">jdbc:postgresql://172.17.0.2:5432/dsweb04</property>
+        <property name="hibernate.connection.username">postgres</property>
+        <property name="hibernate.connection.password">123456</property>
+        
+        <property name="hibernate.dialect">org.hibernate.dialect.PostgreSQLDialect</property>
+
+        <!--<property name="hibernate.show_sql">true</property>-->
+        <property name="hibernate.format_sql">true</property>
+        <property name="hibernate.hbm2ddl.auto">update</property>
+        <property name="current_session_context_class">thread</property>
+        <!-- Mapear clases de entidades (opcional) -->
+        <mapping class="org.uv.dsweb.practica04.Entyties.Client"/>
+        <mapping class="org.uv.dsweb.practica04.Entyties.Product"/>
+        <mapping class="org.uv.dsweb.practica04.Entyties.Sale"/>
+        <mapping class="org.uv.dsweb.practica04.Entyties.SaleDetail"/>
+    </session-factory>
+</hibernate-configuration>
+
